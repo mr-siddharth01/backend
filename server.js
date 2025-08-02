@@ -2,10 +2,11 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-app.use(cors());
 
 dotenv.config();
-const app = express();
+
+const app = express(); // ✅ Initialize pehle karo
+app.use(cors());
 const PORT = process.env.PORT || 5000;
 
 const apiKey = process.env.OPENWEATHER_API_KEY;
