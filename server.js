@@ -2,13 +2,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-
-app.use(cors({
-  origin: 'http://localhost:5174', // ✅ Use your frontend's origin during local dev
-  methods: ['GET'],
-  credentials: true
-}));
-
+app.use(cors());
 
 dotenv.config();
 const app = express();
